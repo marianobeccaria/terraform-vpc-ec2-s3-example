@@ -13,5 +13,4 @@ This repo creates a terraform stack to provision:
    terraform plan
    terraform apply
     ```
-    
-3.Verify in AWS console that resources were created
+3. Verify in AWS console that resources were created
