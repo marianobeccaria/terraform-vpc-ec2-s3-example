@@ -35,4 +35,6 @@ override.tf.json
 terraform.rc
 
 *.swp
+*.pub
+keys/*
 
