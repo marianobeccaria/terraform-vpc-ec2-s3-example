@@ -9,7 +9,9 @@ This repo creates a terraform stack to provision:
 ## How to deploy these resources?
 1. Modify values in `varibles.tf` file according to your needs. You'll defenitely need to change the bucket name, for example
 2. Run: 
-    `terraform plan`
-    `terraform apply`
+   ```
+   terraform plan
+   terraform apply
+    ```
     
-4.Verify in AWS console that resources were created
+3.Verify in AWS console that resources were created
