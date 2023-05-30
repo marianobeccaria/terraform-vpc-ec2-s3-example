@@ -34,7 +34,9 @@ resource "aws_instance" "private_instance_01" {
   sudo apt install python3-pip -y
   sudo apt install awscli -y
   aws s3 cp s3://tf-example-mariano-11645232twerer/write_to_100.py /tmp/write_to_100.py
+  aws s3 cp s3://tf-example-mariano-11645232twerer/get-metadata.py /tmp/get-metadata.py
   /tmp/write_to_100.py
+  /tmp/get-metadata.py
 
   EOF
 

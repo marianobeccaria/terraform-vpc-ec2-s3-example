@@ -14,3 +14,10 @@ resource "aws_s3_object" "file1" {
   source      = "./userdata/write_to_100.py"
   force_destroy = true
 }
+
+resource "aws_s3_object" "file2" {
+  bucket      = aws_s3_bucket.mydemobucket.id
+  key         = "get-metadata.py"
+  source      = "./userdata/get-metadata.py"
+  force_destroy = true
+}
