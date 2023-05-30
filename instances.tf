@@ -17,12 +17,12 @@ resource "aws_instance" "private_instance_01" {
   ami                         = data.aws_ssm_parameter.ubuntu2204.value
   instance_type               = var.instance_type
   key_name                    = aws_key_pair.master-key.key_name
-  associate_public_ip_address = true
+  associate_public_ip_address = false
   vpc_security_group_ids      = [aws_security_group.sg-public-to-private.id]
   subnet_id                   = aws_subnet.subnet_2.id
   iam_instance_profile        = aws_iam_instance_profile.IamEc2InstaceProfile.name
   root_block_device {
-    volume_size = var.ebs_vol_size      # in GB <<----- I increased this!
+    volume_size = var.ebs_vol_size      # in GB <<----- I can increase this!
     # volume_type = "gp3"
     # encrypted   = true
     # kms_key_id  = data.aws_kms_key.customer_master_key.arn
